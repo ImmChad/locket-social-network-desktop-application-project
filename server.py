@@ -60,15 +60,11 @@ class Service:
                 # Gửi thông báo lỗi về cho client (ví dụ)
                 sio.emit('login_failed', room=sid)
 
-        port = 9999
-        self.text_area.insert(tk.END, f"Server is running on http://localhost:{port}\n")
-
-        app = socketio.WSGIApp(sio, app)
-        import eventlet
-        eventlet.wsgi.server(eventlet.listen(('localhost', port)), app)
-        
         @sio.on('insert_post')  # Thêm sự kiện post
         def insert_post(sid, data):
+            print("post")
+            print(data)
+            
             content = data.get('content')
             img = data.get('image')
             user_id = data.get('user_id')
@@ -91,6 +87,15 @@ class Service:
             sio.emit('update_list_friend', friends, room=sid)
             sio.emit('update_my_images', my_img, room=sid)
             sio.emit('update_my_posts', posts, room=sid)
+
+        port = 9999
+        self.text_area.insert(tk.END, f"Server is running on http://localhost:{port}\n")
+
+        app = socketio.WSGIApp(sio, app)
+        import eventlet
+        eventlet.wsgi.server(eventlet.listen(('localhost', port)), app)
+        
+        
 
     def user_disconnect(self, user_id):
         for sid in self.list_client:

@@ -48,20 +48,20 @@ CREATE TABLE posts (
 
 -- Thêm dữ liệu vào bảng posts
 INSERT INTO posts (user_id, content, image, reciever_id) VALUES
-    (1, 'text1', 'images/contents/content(5).png', 3),
-    (1, 'text2', 'images/contents/content(3).png', 4),
-    (2, 'text3', 'images/contents/content(2).png', 0),
-    (2, 'text4', 'images/contents/content(1).png', 2),
-		(2, 'text5', 'images/contents/content(4).png', 3),
-    (2, 'text6', 'images/contents/content(5).png', 0),
-		(2, 'text7', 'images/contents/content(3).png', 0),
-    (2, 'text8', 'images/contents/content(2).png', 1),
-    (3, 'text9', 'images/contents/content(1).png', 2),
-    (3, 'text10', 'images/contents/content(2).png', 2),
-    (3, 'text11', 'images/contents/content(3).png', 2),
-    (4, 'text12', 'images/contents/content(1).png', 2),
-    (4, 'text13', 'images/contents/content(4).png', 0),
-    (4, 'text14', 'images/contents/content(5).png', 9);
+    (1, 'text1', 'images/contents/content (5).png', 3),
+    (1, 'text2', 'images/contents/content (3).png', 4),
+    (2, 'text3', 'images/contents/content (2).png', 0),
+    (2, 'text4', 'images/contents/content (1).png', 2),
+		(2, 'text5', 'images/contents/content (4).png', 3),
+    (2, 'text6', 'images/contents/content (5).png', 0),
+		(2, 'text7', 'images/contents/content (3).png', 0),
+    (2, 'text8', 'images/contents/content (2).png', 1),
+    (3, 'text9', 'images/contents/content (1).png', 2),
+    (3, 'text10', 'images/contents/content (2).png', 2),
+    (3, 'text11', 'images/contents/content (3).png', 2),
+    (4, 'text12', 'images/contents/content (1).png', 2),
+    (4, 'text13', 'images/contents/content (4).png', 0),
+    (4, 'text14', 'images/contents/content (5).png', 9);
 
 
 
